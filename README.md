@@ -15,6 +15,10 @@ ssh 45.55.159.44 -p 23234
 Use ctrl-c to quit
 
 
+[Demo](https://github.com/user-attachments/assets/ee0b2d70-2e5a-4f47-bfba-9d2c25dce2ee)
+
+
+
 ### Inspiration
 [typeracer](https://play.typeracer.com/) and [terminal.shop](https://www.terminal.shop/)
 
@@ -37,3 +41,22 @@ i got some more experience with go and I learned how to host things outside of m
 
 ### What's next for Terminal Typeracer
 Clean up the UI, make it easier to join and leave lobbies
+
+
+### Running locally
+Clone the repo and cd into the project directory. Then, open two terminals and run
+```
+# Terminal 1
+go run ./cmd/server
+
+# Terminal 2
+go run ./cmd/ssh
+```
+
+Alternatively, you can do the following in one terminal session
+
+```
+go run ./cmd/server & go run ./cmd/ssh
+```
+
+After starting the server and ssh handler, you can do `ssh localhost -p 23234` to connect.
